@@ -13,7 +13,6 @@ import javax.swing.SwingUtilities;
 public class KasKita {
 
     public static void main(String[] args) {
-        // TODO: ganti MainUI dengan TampilanLogin kalau sudah dibuat tim JFrame
         SwingUtilities.invokeLater(() -> new MainUI().setVisible(true));
     }
 }
