@@ -4,6 +4,8 @@
 
 package com.mycompany.kaskita;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author chiyase
@@ -11,6 +13,7 @@ package com.mycompany.kaskita;
 public class KasKita {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // TODO: ganti MainUI dengan TampilanLogin kalau sudah dibuat tim JFrame
+        SwingUtilities.invokeLater(() -> new MainUI().setVisible(true));
     }
 }
