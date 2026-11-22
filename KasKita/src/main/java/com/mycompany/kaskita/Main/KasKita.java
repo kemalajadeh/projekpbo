@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.kaskita;
+package com.mycompany.kaskita.Main;
 
 import javax.swing.SwingUtilities;
+import com.mycompany.kaskita.UI.*;
 
 /**
  *
