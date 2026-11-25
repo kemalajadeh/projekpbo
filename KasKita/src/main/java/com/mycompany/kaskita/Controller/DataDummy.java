@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 class DataDummy {
-
     static final List<Pengguna> PENGGUNA = List.of(
             new Pengguna(1, "laila", "admin123", Pengguna.ADMIN),
             new Pengguna(2, "owner", "owner123", Pengguna.OWNER));

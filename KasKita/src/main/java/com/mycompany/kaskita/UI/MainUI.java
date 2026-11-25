@@ -360,8 +360,10 @@ public class MainUI extends javax.swing.JFrame {
         );
 
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
         Judul.setFont(new java.awt.Font("sansserif", 1, 48)); // NOI18N
+        Judul.setForeground(new java.awt.Color(0, 204, 51));
         Judul.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Judul.setText("KasKita");
 
