@@ -4,6 +4,7 @@ public class Pengguna {
 
     public static final String ADMIN = "Admin";
     public static final String OWNER = "Owner";
+    public static final String USER = "User";
 
     private final int idPengguna;
     private final String username;

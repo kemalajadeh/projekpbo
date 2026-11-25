@@ -14,6 +14,6 @@ import com.mycompany.kaskita.UI.*;
 public class KasKita {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new MainUI().setVisible(true));
+        SwingUtilities.invokeLater(() -> new LoginUI().setVisible(true));
     }
 }

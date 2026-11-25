@@ -40,6 +40,7 @@ public class LoginUI extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         enterButton = new javax.swing.JButton();
         passwordField = new javax.swing.JPasswordField();
+        daftarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,12 +58,15 @@ public class LoginUI extends javax.swing.JFrame {
 
         passwordLabel.setText("Password");
 
-        enterButton.setBackground(new java.awt.Color(51, 153, 0));
+        enterButton.setBackground(new java.awt.Color(51, 204, 0));
         enterButton.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         enterButton.setText("Masuk");
         enterButton.addActionListener(this::enterButtonActionPerformed);
 
-        passwordField.setText("jPasswordField1");
+        daftarButton.setBackground(new java.awt.Color(0, 153, 255));
+        daftarButton.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        daftarButton.setText("Daftar");
+        daftarButton.addActionListener(this::daftarButtonActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,7 +83,10 @@ public class LoginUI extends javax.swing.JFrame {
                             .addComponent(subJudulLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(usernameLabel)
                             .addComponent(passwordLabel)
-                            .addComponent(enterButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(enterButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(daftarButton))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(passwordField, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(usernameField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)))))
@@ -98,11 +105,13 @@ public class LoginUI extends javax.swing.JFrame {
                 .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(passwordLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(enterButton)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(daftarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
@@ -131,6 +140,24 @@ public class LoginUI extends javax.swing.JFrame {
        
     }//GEN-LAST:event_enterButtonActionPerformed
 
+    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
+        // TODO add your handling code here:
+        String usr = usernameField.getText().trim();
+        String pswrd = new String(passwordField.getPassword());
+
+        if (usr.isEmpty() || pswrd.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Isi username dan password baru di kolom atas lalu klik Daftar!", "Info", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+
+        boolean berhasil = pengendaliAkun.daftarUser(usr, pswrd);
+        if (berhasil) {
+            JOptionPane.showMessageDialog(this, "Akun User berhasil dibuat! Silakan klik Masuk.");
+        } else {
+            JOptionPane.showMessageDialog(this, "Username sudah terpakai atau gagal terhubung ke database.", "Gagal Daftar", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_daftarButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -157,6 +184,7 @@ public class LoginUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton daftarButton;
     private javax.swing.JButton enterButton;
     private javax.swing.JLabel judulLogin;
     private javax.swing.JPasswordField passwordField;
