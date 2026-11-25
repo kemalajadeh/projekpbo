@@ -54,18 +54,25 @@ public class LoginUI extends javax.swing.JFrame {
 
         usernameLabel.setText("Username");
 
+        usernameField.setNextFocusableComponent(passwordField);
         usernameField.addActionListener(this::usernameFieldActionPerformed);
 
         passwordLabel.setText("Password");
 
         enterButton.setBackground(new java.awt.Color(51, 204, 0));
         enterButton.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        enterButton.setMnemonic('M');
         enterButton.setText("Masuk");
+        enterButton.setNextFocusableComponent(daftarButton);
         enterButton.addActionListener(this::enterButtonActionPerformed);
+
+        passwordField.setNextFocusableComponent(enterButton);
 
         daftarButton.setBackground(new java.awt.Color(0, 153, 255));
         daftarButton.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        daftarButton.setMnemonic('D');
         daftarButton.setText("Daftar");
+        daftarButton.setNextFocusableComponent(usernameField);
         daftarButton.addActionListener(this::daftarButtonActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

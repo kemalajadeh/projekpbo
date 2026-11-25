@@ -201,10 +201,12 @@ public class MainUI extends javax.swing.JFrame {
 
         addTransaksi.setBackground(new java.awt.Color(102, 255, 51));
         addTransaksi.setText("+ Tambah Transaksi");
+        addTransaksi.setNextFocusableComponent(editButton);
         addTransaksi.addActionListener(this::addTransaksiActionPerformed);
 
         editButton.setBackground(new java.awt.Color(255, 255, 51));
         editButton.setText("Edit");
+        editButton.setNextFocusableComponent(deleteButton);
         editButton.addActionListener(this::editButtonActionPerformed);
 
         deleteButton.setBackground(new java.awt.Color(255, 51, 51));
@@ -219,22 +221,27 @@ public class MainUI extends javax.swing.JFrame {
 
         tanggalLable.setText("Tanggal:");
 
+        dateField.setNextFocusableComponent(categoryField);
         dateField.addActionListener(this::dateFieldActionPerformed);
 
         kategoriLabel.setText("Kategori:");
 
+        categoryField.setNextFocusableComponent(jenisField);
         categoryField.addActionListener(this::categoryFieldActionPerformed);
 
         jenisLabel.setText("Jenis:");
 
+        jenisField.setNextFocusableComponent(amountField);
         jenisField.addActionListener(this::jenisFieldActionPerformed);
 
         nominalLabel.setText("Nominal:");
 
+        amountField.setNextFocusableComponent(ketField);
         amountField.addActionListener(this::amountFieldActionPerformed);
 
         ketLabel.setText("Keterangan:");
 
+        ketField.setNextFocusableComponent(addTransaksi);
         ketField.addActionListener(this::ketFieldActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

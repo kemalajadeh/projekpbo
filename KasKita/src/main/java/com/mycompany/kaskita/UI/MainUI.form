@@ -305,6 +305,9 @@
               <Color blue="33" green="ff" red="66" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="+ Tambah Transaksi"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="editButton"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addTransaksiActionPerformed"/>
@@ -316,6 +319,9 @@
               <Color blue="33" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="deleteButton"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editButtonActionPerformed"/>
@@ -355,6 +361,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="dateField">
+          <Properties>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="categoryField"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dateFieldActionPerformed"/>
           </Events>
@@ -365,6 +376,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="categoryField">
+          <Properties>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jenisField"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="categoryFieldActionPerformed"/>
           </Events>
@@ -375,6 +391,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jenisField">
+          <Properties>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="amountField"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jenisFieldActionPerformed"/>
           </Events>
@@ -385,6 +406,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="amountField">
+          <Properties>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="ketField"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="amountFieldActionPerformed"/>
           </Events>
@@ -395,6 +421,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="ketField">
+          <Properties>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="addTransaksi"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ketFieldActionPerformed"/>
           </Events>
